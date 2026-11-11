@@ -1,0 +1,1639 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATELIER VÉRA — Seni Kriya Kulit Arsitektural &amp; Koleksi Eksklusif</title>
+  <meta name="description" content="Atelier Véra merancang objek kulit arsitektural yang memadukan kemurnian garis geometris, material vegetable-tanned leather bersertifikasi, dan ketelitian kriya tangan.">
+  
+  <!-- Google Fonts: Playfair Display (Heading) & Plus Jakarta Sans (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================
+       RESET & ROOT VARIABLES
+       Brand: ATELIER VÉRA (Original Artisan Leathercraft)
+       Palet: Warm Alabaster (#f6f4f0), Dark Obsidian (#131416), Terracotta Cognac (#a44e2b)
+       ========================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --color-bg: #f6f4f0;
+      --color-surface: #ffffff;
+      --color-surface-tint: #ede9e1;
+      --color-dark: #131416;
+      --color-dark-muted: #474a4f;
+      --color-accent: #a44e2b; /* Terracotta Cognac */
+      --color-accent-dark: #823819;
+      --color-olive: #324338;
+      --color-line: rgba(19, 20, 22, 0.15);
+      --color-line-strong: rgba(19, 20, 22, 0.35);
+
+      --font-heading: 'Playfair Display', Georgia, serif;
+      --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+      --container-max: 1180px;
+      --space-section: clamp(4rem, 8vw, 7.5rem);
+      --transition-smooth: 0.28s ease;
+    }
+
+    html {
+      background-color: var(--color-bg);
+      color: var(--color-dark);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.65;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-dark);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Aksesibilitas: Fokus Keyboard yang Jelas */
+    :focus-visible {
+      outline: 2px solid var(--color-accent);
+      outline-offset: 3px;
+    }
+
+    /* TYPOGRAPHY */
+    h1, h2, h3, h4 {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      line-height: 1.15;
+      letter-spacing: -0.015em;
+      color: var(--color-dark);
+    }
+
+    p {
+      font-size: 1.0625rem; /* 17px */
+      line-height: 1.7;
+      color: var(--color-dark-muted);
+      margin-bottom: 1.25rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    .eyebrow {
+      font-family: var(--font-body);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    /* CONTAINER & TATA LETAK */
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: clamp(1.25rem, 4vw, 2.5rem);
+      padding-right: clamp(1.25rem, 4vw, 2.5rem);
+    }
+
+    .section-divider {
+      border: 0;
+      border-top: 1px solid var(--color-line);
+      margin: 0;
+      width: 100%;
+    }
+
+    section {
+      padding-top: var(--space-section);
+      padding-bottom: var(--space-section);
+      position: relative;
+    }
+
+    /* GAMBAR EDITORIAL */
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .editorial-caption {
+      font-size: 0.75rem;
+      color: var(--color-dark-muted);
+      letter-spacing: 0.05em;
+      margin-top: 0.65rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--color-line);
+      padding-top: 0.5rem;
+    }
+
+    /* BUTTONS & LINKS */
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      margin-top: 2.25rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-body);
+      font-size: 0.9375rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      padding: 0.875rem 1.75rem;
+      border-radius: 0;
+      cursor: pointer;
+      transition: background-color var(--transition-smooth), color var(--transition-smooth), border-color var(--transition-smooth);
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background-color: var(--color-dark);
+      color: #ffffff;
+      border: 1px solid var(--color-dark);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--color-accent);
+      border-color: var(--color-accent);
+      color: #ffffff;
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--color-dark);
+      border: 1px solid var(--color-line-strong);
+    }
+
+    .btn-secondary:hover {
+      background-color: rgba(19, 20, 22, 0.06);
+      border-color: var(--color-dark);
+    }
+
+    /* ==========================================================
+       1. TOP BAR
+       ========================================================== */
+    .top-bar {
+      border-bottom: 1px solid var(--color-line);
+      background-color: var(--color-bg);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .top-bar__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 1.15rem;
+      padding-bottom: 1.15rem;
+    }
+
+    .top-bar__brand-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .top-bar__brand {
+      font-family: var(--font-heading);
+      font-size: 1.55rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--color-dark);
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .top-bar__tagline {
+      font-size: 0.6875rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-top: -2px;
+    }
+
+    .top-bar__sub {
+      display: none;
+      font-size: 0.8125rem;
+      color: var(--color-dark-muted);
+      letter-spacing: 0.03em;
+    }
+
+    @media (min-width: 820px) {
+      .top-bar__sub {
+        display: block;
+      }
+    }
+
+    .top-bar__link {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--color-dark);
+      text-decoration: none;
+      border-bottom: 1px solid var(--color-accent);
+      padding-bottom: 2px;
+      transition: color var(--transition-smooth), border-color var(--transition-smooth);
+    }
+
+    .top-bar__link:hover {
+      color: var(--color-accent);
+      border-color: var(--color-dark);
+    }
+
+    /* ==========================================================
+       2. HERO SECTION
+       ========================================================== */
+    .hero {
+      padding-top: clamp(3rem, 7vw, 5.5rem);
+      padding-bottom: clamp(3.5rem, 8vw, 6.5rem);
+    }
+
+    .hero__layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    @media (min-width: 960px) {
+      .hero__layout {
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 4.5rem;
+      }
+    }
+
+    .hero__headline {
+      font-size: clamp(2.35rem, 5.2vw, 4.25rem);
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+      color: var(--color-dark);
+    }
+
+    .hero__lead {
+      font-size: clamp(1.0625rem, 1.3vw, 1.25rem);
+      line-height: 1.7;
+      color: var(--color-dark-muted);
+      max-width: 38rem;
+    }
+
+    .hero__media {
+      width: 100%;
+    }
+
+    .hero__photo-frame {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      border: 1px solid var(--color-line-strong);
+      background-color: var(--color-surface-tint);
+      position: relative;
+    }
+
+    .hero__product-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .hero__photo-frame:hover .hero__product-image {
+      transform: scale(1.025);
+    }
+
+    .hero__photo-tag {
+      position: absolute;
+      bottom: 1.25rem;
+      left: 1.25rem;
+      background: rgba(246, 244, 240, 0.94);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      padding: 0.5rem 0.875rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--color-dark);
+      border: 1px solid var(--color-line);
+    }
+
+    /* ==========================================================
+       3. DAFTAR MODEL (ACCORDION DENGAN FOTO DETAIL)
+       ========================================================== */
+    .models {
+      background-color: var(--color-bg);
+    }
+
+    .models__header {
+      max-width: 44rem;
+      margin-bottom: 3rem;
+    }
+
+    .models__title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 1rem;
+    }
+
+    .models__group-title {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--color-dark);
+      padding-bottom: 0.75rem;
+      margin-top: 2.75rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--color-line-strong);
+    }
+
+    .accordion-list {
+      border-top: 1px solid var(--color-line);
+      margin-bottom: 2.5rem;
+    }
+
+    details.model-item {
+      border-bottom: 1px solid var(--color-line);
+      transition: background-color var(--transition-smooth);
+    }
+
+    details.model-item[open] {
+      background-color: rgba(19, 20, 22, 0.025);
+    }
+
+    summary.model-item__summary {
+      list-style: none;
+      padding: 1.35rem 0;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+
+    summary.model-item__summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .model-item__title-wrap {
+      display: flex;
+      align-items: baseline;
+      gap: 1.25rem;
+      padding-right: 1rem;
+    }
+
+    .model-item__number {
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--color-accent);
+      min-width: 2.25rem;
+    }
+
+    .model-item__name {
+      font-family: var(--font-heading);
+      font-size: clamp(1.25rem, 2.2vw, 1.625rem);
+      font-weight: 600;
+      color: var(--color-dark);
+      letter-spacing: 0.01em;
+    }
+
+    .model-item__icon {
+      font-family: var(--font-body);
+      font-size: 1.35rem;
+      font-weight: 300;
+      line-height: 1;
+      color: var(--color-dark);
+      transition: transform var(--transition-smooth);
+      display: inline-block;
+      width: 1.5rem;
+      text-align: right;
+    }
+
+    details[open] summary .model-item__icon {
+      transform: rotate(45deg);
+    }
+
+    .model-item__content {
+      padding-bottom: 2rem;
+      padding-left: clamp(0rem, 3vw, 3.5rem);
+      padding-right: 1rem;
+    }
+
+    .model-item__inner-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    @media (min-width: 720px) {
+      .model-item__inner-grid {
+        grid-template-columns: 220px 1fr;
+        gap: 2.5rem;
+      }
+    }
+
+    .model-item__thumb-frame {
+      width: 100%;
+      aspect-ratio: 4 / 4.5;
+      background-color: var(--color-surface-tint);
+      border: 1px solid var(--color-line);
+      overflow: hidden;
+    }
+
+    .model-item__thumb-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .model-item__desc {
+      font-size: 1.0625rem;
+      color: var(--color-dark-muted);
+      line-height: 1.7;
+      margin-bottom: 0.85rem;
+    }
+
+    .model-item__note {
+      font-size: 0.875rem;
+      color: var(--color-accent-dark);
+      margin: 0;
+    }
+
+    .model-item__note a {
+      color: var(--color-accent-dark);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* ==========================================================
+       4. ASAL-USUL & FILOSOFI STUDIO
+       ========================================================== */
+    .origins {
+      background-color: var(--color-bg);
+    }
+
+    .origins__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3.5rem;
+      align-items: start;
+    }
+
+    @media (min-width: 900px) {
+      .origins__grid {
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 4.5rem;
+      }
+    }
+
+    .origins__title {
+      font-size: clamp(2rem, 3.8vw, 3rem);
+      margin-bottom: 1.75rem;
+    }
+
+    .origins__narrative p {
+      margin-bottom: 1.35rem;
+    }
+
+    /* Visual Studio & Craft */
+    .origins__photos-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+
+    .origins__photo-card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .origins__photo-box {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      border: 1px solid var(--color-line);
+      overflow: hidden;
+      background-color: var(--color-surface-tint);
+    }
+
+    .origins__photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .origins__photo-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-top: 0.5rem;
+    }
+
+    .origins__data-box {
+      border: 1px solid var(--color-line-strong);
+      padding: clamp(1.5rem, 3vw, 2.25rem);
+      background-color: var(--color-surface);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    }
+
+    .origins__data-title {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      letter-spacing: 0.02em;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--color-line);
+    }
+
+    .origins__data-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .origins__data-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      border-bottom: 1px solid var(--color-line);
+      padding-bottom: 1rem;
+    }
+
+    .origins__data-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .origins__label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+    }
+
+    .origins__value {
+      font-size: 1rem;
+      color: var(--color-dark);
+      font-weight: 600;
+    }
+
+    /* ==========================================================
+       5. PILIH RONA KULIT (INTERACTIVE COLOR & IMAGE STUDIO)
+       ========================================================== */
+    .shade-studio {
+      background-color: #8c4224; /* Default Cognac */
+      color: #ffffff;
+      transition: background-color 0.4s ease, color 0.4s ease;
+      padding-top: clamp(4rem, 7.5vw, 7rem);
+      padding-bottom: clamp(4rem, 7.5vw, 7rem);
+      border-top: 1px solid var(--color-line);
+      border-bottom: 1px solid var(--color-line);
+    }
+
+    .shade-studio__layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    @media (min-width: 900px) {
+      .shade-studio__layout {
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 4.5rem;
+      }
+    }
+
+    .shade-studio .eyebrow {
+      color: currentColor;
+      opacity: 0.9;
+    }
+
+    .shade-studio__title {
+      font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+      color: currentColor;
+      margin-bottom: 1rem;
+    }
+
+    .shade-studio__lead {
+      color: currentColor;
+      opacity: 0.92;
+      font-size: 1.0625rem;
+      margin-bottom: 2.25rem;
+    }
+
+    .shade-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 2.25rem;
+    }
+
+    .shade-btn {
+      appearance: none;
+      -webkit-appearance: none;
+      background: transparent;
+      border: 1px solid currentColor;
+      color: currentColor;
+      font-family: var(--font-body);
+      font-size: 0.9375rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      padding: 0.75rem 1.4rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      transition: background-color var(--transition-smooth), opacity var(--transition-smooth);
+    }
+
+    .shade-btn:hover {
+      opacity: 0.85;
+    }
+
+    .shade-btn[aria-pressed="true"] {
+      background-color: #ffffff;
+      color: #131416;
+      border-color: #ffffff;
+      font-weight: 700;
+    }
+
+    .shade-studio[data-active-shade="alabaster"] .shade-btn[aria-pressed="true"] {
+      background-color: #131416;
+      color: #ffffff;
+      border-color: #131416;
+    }
+
+    .shade-swatch {
+      display: inline-block;
+      width: 0.875rem;
+      height: 0.875rem;
+      border: 1px solid rgba(0, 0, 0, 0.25);
+    }
+
+    .shade-card {
+      border: 1px solid currentColor;
+      padding: clamp(1.25rem, 2.5vw, 1.75rem);
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(6px);
+    }
+
+    .shade-card__name {
+      font-family: var(--font-heading);
+      font-size: 1.85rem;
+      margin-bottom: 0.35rem;
+      color: currentColor;
+    }
+
+    .shade-card__desc {
+      color: currentColor;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Foto Rona Kulit */
+    .shade-visual {
+      width: 100%;
+    }
+
+    .shade-visual__frame {
+      width: 100%;
+      aspect-ratio: 4 / 4.5;
+      border: 1px solid currentColor;
+      background-color: rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .shade-visual__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.35s ease;
+    }
+
+    .shade-visual__caption {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.5rem 0.75rem;
+      background: rgba(0, 0, 0, 0.45);
+      color: #ffffff;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    /* Tema Warna Spesifik */
+    .shade-studio[data-active-shade="cognac"] {
+      background-color: #8c4224;
+      color: #ffffff;
+      --btn-text-color: #8c4224;
+    }
+
+    .shade-studio[data-active-shade="forest"] {
+      background-color: #2b3d32;
+      color: #f6f4f0;
+      --btn-text-color: #2b3d32;
+    }
+
+    .shade-studio[data-active-shade="obsidian"] {
+      background-color: #151618;
+      color: #f6f4f0;
+      --btn-text-color: #151618;
+    }
+
+    .shade-studio[data-active-shade="alabaster"] {
+      background-color: #eee9df;
+      color: #131416;
+      --btn-text-color: #eee9df;
+    }
+
+    /* ==========================================================
+       6. DIBAHAS DI MEDIA
+       ========================================================== */
+    .press {
+      background-color: var(--color-bg);
+    }
+
+    .press__header {
+      max-width: 42rem;
+      margin-bottom: 3rem;
+    }
+
+    .press__title {
+      font-size: clamp(2rem, 3.8vw, 3rem);
+      margin-bottom: 1rem;
+    }
+
+    .press-list {
+      border-top: 1px solid var(--color-line);
+      list-style: none;
+    }
+
+    .press-item {
+      border-bottom: 1px solid var(--color-line);
+      padding: clamp(1.75rem, 3vw, 2.25rem) 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      align-items: baseline;
+    }
+
+    @media (min-width: 768px) {
+      .press-item {
+        grid-template-columns: 240px 1fr 140px;
+        gap: 2rem;
+      }
+    }
+
+    .press-item__outlet {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--color-dark);
+    }
+
+    .press-item__summary {
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      color: var(--color-dark-muted);
+      margin: 0;
+    }
+
+    .press-item__link {
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--color-accent);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--transition-smooth), color var(--transition-smooth);
+    }
+
+    .press-item__link:hover {
+      color: var(--color-dark);
+      border-color: var(--color-dark);
+    }
+
+    /* ==========================================================
+       7. CTA PENUTUP
+       ========================================================== */
+    .closing-cta {
+      background-color: var(--color-surface);
+      border-top: 1px solid var(--color-line);
+      border-bottom: 1px solid var(--color-line);
+      text-align: left;
+    }
+
+    .closing-cta__content {
+      max-width: 48rem;
+    }
+
+    .closing-cta__title {
+      font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+      margin-bottom: 1.25rem;
+    }
+
+    .closing-cta__desc {
+      font-size: 1.125rem;
+      margin-bottom: 2.25rem;
+    }
+
+    .closing-cta__buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    /* ==========================================================
+       8. FOOTER
+       ========================================================== */
+    .site-footer {
+      background-color: var(--color-bg);
+      padding-top: 4rem;
+      padding-bottom: 4.5rem;
+      border-top: 1px solid var(--color-line);
+    }
+
+    .footer__brand-box {
+      border: 1px solid var(--color-line-strong);
+      padding: clamp(1.75rem, 3vw, 2.5rem);
+      background-color: var(--color-surface);
+      margin-bottom: 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .footer__brand-box {
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 3rem;
+        align-items: center;
+      }
+    }
+
+    .footer__brand-name {
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--color-dark);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .footer__brand-desc {
+      font-size: 0.9375rem;
+      color: var(--color-dark-muted);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    .footer__badges {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      font-size: 0.8125rem;
+      color: var(--color-dark);
+      border-left: none;
+      padding-left: 0;
+    }
+
+    @media (min-width: 768px) {
+      .footer__badges {
+        border-left: 1px solid var(--color-line);
+        padding-left: 2rem;
+      }
+    }
+
+    .footer__badge-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .footer__badge-bullet {
+      color: var(--color-accent);
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+
+    .footer__bottom {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      font-size: 0.875rem;
+      color: var(--color-dark-muted);
+      border-top: 1px solid var(--color-line);
+      padding-top: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .footer__bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    .footer__bottom a {
+      color: var(--color-dark);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .footer__bottom a:hover {
+      color: var(--color-accent);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================
+       1. BAR ATAS (HEADER)
+       ======================================================== -->
+  <header class="top-bar" role="banner">
+    <div class="container top-bar__inner">
+      <div class="top-bar__brand-wrap">
+        <a href="#hero" class="top-bar__brand" aria-label="Kembali ke atas">Atelier Véra</a>
+        <span class="top-bar__tagline">Architectural Leather Objects</span>
+      </div>
+      <span class="top-bar__sub">Studio Kriya Kulit &bull; Small-Batch Atelier</span>
+      <a href="#koleksi-model" class="top-bar__link">
+        Katalog Studio &darr;
+      </a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ========================================================
+         2. HERO SECTION
+         ======================================================== -->
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero__layout">
+          <div class="hero__copy">
+            <span class="eyebrow">Studio Kerajinan Kulit Presisi &bull; Est. 2022</span>
+            <h1 class="hero__headline" id="hero-heading">Bentuk murni yang lahir dari presisi arsitektural.</h1>
+            <p class="hero__lead">
+              Atelier Véra merancang objek kulit dengan pendekatan spasial: mengutamakan integritas struktur, kejujuran material kulit nabati, dan pengerjaan tangan dalam kuantitas terbatas (*small-batch*) yang bertahan melampaui rotasi tren musiman.
+            </p>
+            <div class="btn-group">
+              <a href="#koleksi-model" class="btn btn-primary" id="btn-hero-catalog">
+                Lihat Koleksi Model &darr;
+              </a>
+              <a href="https://wa.me/?text=Halo%20Atelier%20V%C3%A9ra%2C%20saya%20tertarik%20dengan%20katalog%20tas%20kulit%20arsitektural%20Anda." target="_blank" rel="noopener" class="btn btn-secondary" id="btn-hero-contact">
+                Hubungi Studio via WhatsApp &nearr;
+              </a>
+            </div>
+          </div>
+
+          <!--
+            ====================================================
+            TEMPAT FOTO PRODUK HERO:
+            Ganti atribut src di bawah dengan foto katalog atau karya sendiri jika tersedia.
+            ====================================================
+          -->
+          <div class="hero__media">
+            <div class="hero__photo-frame">
+              <img 
+                src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" 
+                alt="Tas tangan kulit Atelier Véra bergaris arsitektural di atas latar studio netral" 
+                class="hero__product-image"
+                width="600"
+                height="750"
+                loading="eager"
+              >
+              <div class="hero__photo-tag">Edisi 01 &bull; The Sculpt Bag</div>
+            </div>
+            <div class="editorial-caption">
+              <span>Full-Grain Vegetable Tanned Leather</span>
+              <span>Hand-Burnished Edges</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider" aria-hidden="true">
+
+    <!-- ========================================================
+         3. DAFTAR MODEL (ACCORDION DENGAN FOTO DETAIL)
+         ======================================================== -->
+    <section class="models" id="koleksi-model" aria-labelledby="models-heading">
+      <div class="container">
+        <header class="models__header">
+          <span class="eyebrow">Katalog Seri Orisinal</span>
+          <h2 class="models__title" id="models-heading">Koleksi Model</h2>
+          <p>
+            Setiap model dirancang melalui eksplorasi volume dan ketegasan garis fungsional. Klik tiap model untuk melihat visualisasi dan spesifikasi kerajinannya.
+          </p>
+        </header>
+
+        <!-- Seri Utama -->
+        <div class="accordion-list" role="region" aria-label="Koleksi model utama Atelier Véra">
+          <!-- Model 01: The Sculpt Bag -->
+          <details class="model-item">
+            <summary class="model-item__summary">
+              <div class="model-item__title-wrap">
+                <span class="model-item__number">01</span>
+                <span class="model-item__name">The Sculpt Bag</span>
+              </div>
+              <span class="model-item__icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="model-item__content">
+              <div class="model-item__inner-grid">
+                <div class="model-item__thumb-frame">
+                  <img 
+                    src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&amp;fit=crop&amp;w=600&amp;q=80" 
+                    alt="The Sculpt Bag dengan siluet lipatan asimetris arsitektural" 
+                    class="model-item__thumb-img"
+                    loading="lazy"
+                  >
+                </div>
+                <div>
+                  <p class="model-item__desc">
+                    Siluet andalan studio dengan lipatan panel asimetris yang dibentuk tanpa jahitan tepi luar berlebih. Menghadirkan keseimbangan antara fleksibilitas harian dan struktur kokoh yang mempertahankan bentuknya saat diletakkan.
+                  </p>
+                  <p class="model-item__note">
+                    Spesifikasi: Kulit sapi nabati full-grain, perangkat keras kuningan solid matte, interior suede alami.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <!-- Model 02: Arc Shoulder -->
+          <details class="model-item">
+            <summary class="model-item__summary">
+              <div class="model-item__title-wrap">
+                <span class="model-item__number">02</span>
+                <span class="model-item__name">Arc Shoulder</span>
+              </div>
+              <span class="model-item__icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="model-item__content">
+              <div class="model-item__inner-grid">
+                <div class="model-item__thumb-frame">
+                  <img 
+                    src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&amp;fit=crop&amp;w=600&amp;q=80" 
+                    alt="Arc Shoulder tas bahu kurva setengah lingkaran" 
+                    class="model-item__thumb-img"
+                    loading="lazy"
+                  >
+                </div>
+                <div>
+                  <p class="model-item__desc">
+                    Tas bahu berkontur setengah lingkaran yang dirancang ergonomis mengikuti postur tubuh. Menggunakan teknik *saddle-stitching* manual pada titik tumpu tali untuk kekuatan tarikan maksimal.
+                  </p>
+                  <p class="model-item__note">
+                    Spesifikasi: Tali bahu ganda dengan pengaturan gesper tersembunyi, kompartemen ponsel berpelindung magnet.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <!-- Model 03: Column Tote -->
+          <details class="model-item">
+            <summary class="model-item__summary">
+              <div class="model-item__title-wrap">
+                <span class="model-item__number">03</span>
+                <span class="model-item__name">Column Tote</span>
+              </div>
+              <span class="model-item__icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="model-item__content">
+              <div class="model-item__inner-grid">
+                <div class="model-item__thumb-frame">
+                  <img 
+                    src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&amp;fit=crop&amp;w=600&amp;q=80" 
+                    alt="Column Tote bergaris vertikal kokoh dengan ruang laptop" 
+                    class="model-item__thumb-img"
+                    loading="lazy"
+                  >
+                </div>
+                <div>
+                  <p class="model-item__desc">
+                    Tote bag berprofil vertikal terinspirasi dari pilar kolom modernis. Mampu menampung laptop hingga ukuran 14 inci dengan partisi empuk yang terpasang rapi di dalam dinding tas.
+                  </p>
+                  <p class="model-item__note">
+                    Spesifikasi: Dasar ganda diperkuat bantalan kaku, pegangan tangan tubular bulat yang nyaman digenggam lama.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <!-- Model 04: Prism Crossbody -->
+          <details class="model-item">
+            <summary class="model-item__summary">
+              <div class="model-item__title-wrap">
+                <span class="model-item__number">04</span>
+                <span class="model-item__name">Prism Crossbody</span>
+              </div>
+              <span class="model-item__icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="model-item__content">
+              <div class="model-item__inner-grid">
+                <div class="model-item__thumb-frame">
+                  <img 
+                    src="https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&amp;fit=crop&amp;w=600&amp;q=80" 
+                    alt="Prism Crossbody tas selempang dengan sudut geometris tegas" 
+                    class="model-item__thumb-img"
+                    loading="lazy"
+                  >
+                </div>
+                <div>
+                  <p class="model-item__desc">
+                    Tas selempang berfaset sudut tegas dengan proporsi kompak untuk kebutuhan mobilitas esensial. Dilengkapi kunci putar presisi berbahan baja tahan karat berlapis satin.
+                  </p>
+                  <p class="model-item__note">
+                    Spesifikasi: Tali selempang kulit dapat dilepas pasang, slot kartu terintegrasi di balik tutup depan.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <!-- Model 05: Vessel Bucket -->
+          <details class="model-item">
+            <summary class="model-item__summary">
+              <div class="model-item__title-wrap">
+                <span class="model-item__number">05</span>
+                <span class="model-item__name">Vessel Bucket</span>
+              </div>
+              <span class="model-item__icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="model-item__content">
+              <div class="model-item__inner-grid">
+                <div class="model-item__thumb-frame">
+                  <img 
+                    src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&amp;fit=crop&amp;w=600&amp;q=80" 
+                    alt="Vessel Bucket tas silinder minimalis berkancing magnet kuningan" 
+                    class="model-item__thumb-img"
+                    loading="lazy"
+                  >
+                </div>
+                <div>
+                  <p class="model-item__desc">
+                    Eksplorasi bentuk bejana silinder dengan dinding kulit kaku dan kantong serut kanvas katun di bagian dalam. Memberikan volume penyimpanan lapang dengan tampilan minimalis.
+                  </p>
+                  <p class="model-item__note">
+                    Spesifikasi: Pouch katun linen dapat dilepas cuci, tali pendek jinjing dan tali panjang silang tubuh.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </details>
+        </div>
+
+        <!-- Subbagian: Seri Eksperimental -->
+        <h3 class="models__group-title">Seri Eksperimental</h3>
+        <div class="accordion-list" role="region" aria-label="Seri eksperimental Atelier Véra">
+          <!-- Kora Weekend -->
+          <details class="model-item">
+            <summary class="model-item__summary">
+              <div class="model-item__title-wrap">
+                <span class="model-item__number">&bull;</span>
+                <span class="model-item__name">Kora Weekend</span>
+              </div>
+              <span class="model-item__icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="model-item__content">
+              <div class="model-item__inner-grid">
+                <div class="model-item__thumb-frame">
+                  <img 
+                    src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&amp;fit=crop&amp;w=600&amp;q=80" 
+                    alt="Kora Weekend tas jinjing bepergian berkapasitas leluasa" 
+                    class="model-item__thumb-img"
+                    loading="lazy"
+                  >
+                </div>
+                <div>
+                  <p class="model-item__desc">
+                    Tas jinjing perjalanan akhir pekan dengan struktur sayap yang dapat ditekuk rapi. Dibuat menggunakan kulit *oiled pull-up* yang menumbuhkan karakter patina semakin indah seiring usia pemakaian.
+                  </p>
+                  <p class="model-item__note">
+                    Spesifikasi: Kapasitas 28 liter, ritsleting kuningan YKK Excella dua arah, saku paspor luar berritsleting.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <!-- Aura Pouch -->
+          <details class="model-item">
+            <summary class="model-item__summary">
+              <div class="model-item__title-wrap">
+                <span class="model-item__number">&bull;</span>
+                <span class="model-item__name">Aura Pouch</span>
+              </div>
+              <span class="model-item__icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="model-item__content">
+              <div class="model-item__inner-grid">
+                <div class="model-item__thumb-frame">
+                  <img 
+                    src="https://images.unsplash.com/photo-1575032617751-6ddec2089882?auto=format&amp;fit=crop&amp;w=600&amp;q=80" 
+                    alt="Aura Pouch tas genggam minimalis lipatan origami" 
+                    class="model-item__thumb-img"
+                    loading="lazy"
+                  >
+                </div>
+                <div>
+                  <p class="model-item__desc">
+                    Pouch tangan lipat dengan penutup magnet tersembunyi. Didesain tanpa jahitan samping eksternal, memanfaatkan lipatan lembaran kulit utuh layaknya teknik origami presisi.
+                  </p>
+                  <p class="model-item__note">
+                    Spesifikasi: Kulit anak sapi nappa bertekstur mentega (*buttery smooth*), tali pergelangan tangan fleksibel.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider" aria-hidden="true">
+
+    <!-- ========================================================
+         4. ASAL-USUL & FILOSOFI STUDIO
+         ======================================================== -->
+    <section class="origins" id="filosofi-studio" aria-labelledby="origins-heading">
+      <div class="container">
+        <div class="origins__grid">
+          <!-- Kolom Kiri: Narasi Studio -->
+          <div class="origins__narrative">
+            <span class="eyebrow">Etos &amp; Manufaktur</span>
+            <h2 class="origins__title" id="origins-heading">Filosofi Atelier Véra</h2>
+            <p>
+              Atelier Véra berakar dari keyakinan bahwa sebuah produk harus mampu berdiri kokoh tanpa riuh logo atau dekorasi yang tak fungsional. Studio kami mengembangkan setiap pola melalui sketsa proporsi tiga dimensi dan uji ketahanan fisik sebelum masuk ke jalur produksi.
+            </p>
+            <p>
+              Seluruh produk dikerjakan secara *small-batch* oleh tim pengrajin kulit terampil di studio kami di Bandung, berkolaborasi dengan penyamakan kulit ramah lingkungan (*vegetable-tanned*) bersertifikasi Leather Working Group (LWG). Setiap tepi kulit digosok manual menggunakan lilin lebah alami (*hand-burnished*), menghasilkan sambungan tepi yang kedap dan tahan retak bertahun-tahun.
+            </p>
+
+            <!-- Foto Studio & Pengerjaan Tangan -->
+            <div class="origins__photos-grid">
+              <div class="origins__photo-card">
+                <div class="origins__photo-box">
+                  <img 
+                    src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&amp;fit=crop&amp;w=600&amp;q=80" 
+                    alt="Proses perakitan dan penjahitan kulit manual di meja kerja studio"
+                    loading="lazy"
+                  >
+                </div>
+                <span class="origins__photo-label">Studio &bull; Bandung Lab</span>
+              </div>
+              <div class="origins__photo-card">
+                <div class="origins__photo-box">
+                  <img 
+                    src="https://images.unsplash.com/photo-1531875456634-3f5418280d20?auto=format&amp;fit=crop&amp;w=600&amp;q=80" 
+                    alt="Peralatan tradisional kriya kulit presisi tinggi"
+                    loading="lazy"
+                  >
+                </div>
+                <span class="origins__photo-label">Kriya Tangan &bull; Hand-Burnished</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kolom Kanan: Kotak Data -->
+          <aside class="origins__data-box" aria-label="Data fakta brand Atelier Véra">
+            <h3 class="origins__data-title">Ikhtisar Studio</h3>
+            <ul class="origins__data-list">
+              <li class="origins__data-row">
+                <span class="origins__label">Tahun Berdiri</span>
+                <span class="origins__value">2022 (Studio Independen)</span>
+              </li>
+              <li class="origins__data-row">
+                <span class="origins__label">Prinsip Desain</span>
+                <span class="origins__value">Purisme Arsitektural &bull; Zero Clutter</span>
+              </li>
+              <li class="origins__data-row">
+                <span class="origins__label">Material Utama</span>
+                <span class="origins__value">Full-Grain Veg-Tan Leather (LWG Certified)</span>
+              </li>
+              <li class="origins__data-row">
+                <span class="origins__label">Teknik Pengerjaan</span>
+                <span class="origins__value">Jahitan Pelana Tangan &amp; Tepi Lilin Lebah</span>
+              </li>
+              <li class="origins__data-row">
+                <span class="origins__label">Model Produksi</span>
+                <span class="origins__value">Small-Batch Handmade (Terbatas per Musim)</span>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         5. PILIH RONA KULIT (COLOR SWITCHER DENGAN FOTO PREVIEW)
+         ======================================================== -->
+    <section class="shade-studio" id="rona-kulit" data-active-shade="cognac" aria-labelledby="shade-heading">
+      <div class="container">
+        <div class="shade-studio__layout">
+          <div class="shade-studio__info">
+            <span class="eyebrow">Palet Nabati Studio</span>
+            <h2 class="shade-studio__title" id="shade-heading">Pilih rona kulit.</h2>
+            <p class="shade-studio__lead">
+              Rona kulit Atelier Véra diekstraksi dari bahan nabati alami seperti kulit kayu pohon ek, tara, dan mimosa. Klik rona di bawah untuk meninjau perubahan warna dan karakternya.
+            </p>
+
+            <div class="shade-controls" role="group" aria-label="Pilihan rona kulit nabati">
+              <button type="button" class="shade-btn" data-shade="cognac" aria-pressed="true" id="btn-shade-cognac">
+                <span class="shade-swatch" style="background-color: #8c4224;" aria-hidden="true"></span>
+                Cognac
+              </button>
+              <button type="button" class="shade-btn" data-shade="forest" aria-pressed="false" id="btn-shade-forest">
+                <span class="shade-swatch" style="background-color: #2b3d32;" aria-hidden="true"></span>
+                Olive Forest
+              </button>
+              <button type="button" class="shade-btn" data-shade="obsidian" aria-pressed="false" id="btn-shade-obsidian">
+                <span class="shade-swatch" style="background-color: #151618;" aria-hidden="true"></span>
+                Obsidian Black
+              </button>
+              <button type="button" class="shade-btn" data-shade="alabaster" aria-pressed="false" id="btn-shade-alabaster">
+                <span class="shade-swatch" style="background-color: #eee9df;" aria-hidden="true"></span>
+                Alabaster Oat
+              </button>
+            </div>
+
+            <div class="shade-card" aria-live="polite">
+              <h3 class="shade-card__name" id="shade-card-name">Cognac</h3>
+              <p class="shade-card__desc" id="shade-card-desc">
+                Rona cokelat madu matang yang disamak dengan ekstrak kayu mimosa, menumbuhkan kilau patina alami yang semakin kaya seiring sentuhan tangan.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pratinjau Foto Warna Kulit -->
+          <div class="shade-visual">
+            <div class="shade-visual__frame">
+              <img 
+                id="shade-visual-img"
+                src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&amp;fit=crop&amp;w=800&amp;q=80" 
+                alt="Pratinjau tas kulit rona Cognac" 
+                class="shade-visual__img"
+                width="400"
+                height="450"
+                loading="lazy"
+              >
+              <div class="shade-visual__caption" id="shade-visual-caption">
+                Koleksi Rona &bull; Cognac Patina
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         6. DIBAHAS DI MEDIA
+         ======================================================== -->
+    <section class="press" id="liputan-media" aria-labelledby="press-heading">
+      <div class="container">
+        <header class="press__header">
+          <span class="eyebrow">Tinjauan Desain &amp; Industri</span>
+          <h2 class="press__title" id="press-heading">Dibahas di media</h2>
+          <p>
+            Ulasan publikasi arsitektur dan gaya hidup mengenai konsistensi bentuk murni dan komitmen manufaktur lambat (*slow fashion*).
+          </p>
+        </header>
+
+        <ul class="press-list">
+          <!-- Architectural Digest -->
+          <li class="press-item">
+            <span class="press-item__outlet">Architectural Digest</span>
+            <p class="press-item__summary">
+              Menilai bagaimana prinsip geometri fasad bangunan modern diintegrasikan secara presisi ke dalam struktur tas jinjing harian tanpa kehilangan fleksibilitas.
+            </p>
+            <div>
+              <a href="https://www.architecturaldigest.com" target="_blank" rel="noopener" class="press-item__link">
+                ArchDigest &nearr;
+              </a>
+            </div>
+          </li>
+
+          <!-- Monocle -->
+          <li class="press-item">
+            <span class="press-item__outlet">Monocle</span>
+            <p class="press-item__summary">
+              Mengapresiasi model produksi skala studio independen yang memprioritaskan ketahanan jangka panjang dan transparansi penyamakan kulit nabati.
+            </p>
+            <div>
+              <a href="https://monocle.com" target="_blank" rel="noopener" class="press-item__link">
+                Monocle &nearr;
+              </a>
+            </div>
+          </li>
+
+          <!-- The Design Files -->
+          <li class="press-item">
+            <span class="press-item__outlet">The Design Files</span>
+            <p class="press-item__summary">
+              Menyoroti ketelitian pengerjaan manual pada gosokan tepi lilin lebah dan peniadaan logo visual yang menjadikan siluet tas sebagai identitas utama.
+            </p>
+            <div>
+              <a href="https://thedesignfiles.net" target="_blank" rel="noopener" class="press-item__link">
+                The Design Files &nearr;
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         7. CTA PENUTUP
+         ======================================================== -->
+    <section class="closing-cta" id="cta-penutup" aria-labelledby="closing-heading">
+      <div class="container">
+        <div class="closing-cta__content">
+          <span class="eyebrow">Hubungi Studio &amp; Jejaring</span>
+          <h2 class="closing-cta__title" id="closing-heading">Miliki karya kriya yang bertahan lintas generasi.</h2>
+          <p class="closing-cta__desc">
+            Seluruh batch produk dirilis dalam kuantitas terjadwal. Dapatkan rincian ketersediaan edisi terkini, panduan perawatan kulit nabati, dan konsultasi pesanan langsung melalui kanal studio kami.
+          </p>
+          <div class="closing-cta__buttons">
+            <a href="#koleksi-model" class="btn btn-primary" id="btn-cta-catalog">
+              Tinjau Katalog Model &darr;
+            </a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener" class="btn btn-secondary" id="btn-cta-instagram">
+              Instagram @atelier.vera &nearr;
+            </a>
+            <a href="https://wa.me/?text=Halo%20Atelier%20V%C3%A9ra%2C%20saya%20tertarik%20dengan%20katalog%20tas%20kulit%20arsitektural%20Anda." target="_blank" rel="noopener" class="btn btn-secondary" id="btn-cta-whatsapp">
+              Bagikan lewat WhatsApp &nearr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================
+       8. FOOTER
+       ======================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__brand-box">
+        <div>
+          <h3 class="footer__brand-name">Atelier Véra</h3>
+          <p class="footer__brand-desc">
+            Studio kriya kulit independen yang merancang objek arsitektural tahan lama. Setiap karya dibuat dalam kuantitas terbatas menggunakan kulit nabati bersertifikasi ramah lingkungan.
+          </p>
+        </div>
+        <div class="footer__badges">
+          <div class="footer__badge-item">
+            <span class="footer__badge-bullet">&bull;</span>
+            <span>Garansi Kriya Seumur Hidup pada Jahitan</span>
+          </div>
+          <div class="footer__badge-item">
+            <span class="footer__badge-bullet">&bull;</span>
+            <span>LWG Gold Certified Vegetable-Tanned Leather</span>
+          </div>
+          <div class="footer__badge-item">
+            <span class="footer__badge-bullet">&bull;</span>
+            <span>Pengiriman Aman ke Seluruh Indonesia &amp; Global</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; 2026 Atelier Véra Studio. Seluruh hak cipta dilindungi.</span>
+        <span>Bandung Studio &bull; Tuscany Leather Partnership</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================
+     JAVASCRIPT: INTERAKSI PALET KULIT & FOTO DINAMIS
+     ======================================================== -->
+  <script>
+    (function() {
+      'use strict';
+
+      // Data rona kulit, deskripsi, dan foto untuk Section 5
+      var shadeData = {
+        cognac: {
+          name: 'Cognac',
+          desc: 'Rona cokelat madu matang yang disamak dengan ekstrak kayu mimosa, menumbuhkan kilau patina alami yang semakin kaya seiring sentuhan tangan.',
+          image: 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=800&q=80',
+          alt: 'Pratinjau tas kulit rona Cognac',
+          caption: 'Koleksi Rona \u2022 Cognac Patina'
+        },
+        forest: {
+          name: 'Olive Forest',
+          desc: 'Paduan hijau zaitun pekat bernuansa teduh yang dihasilkan dari daun tumbuhan alami, menonjolkan kedalaman siluet arsitektural tanpa kilap mencolok.',
+          image: 'https://images.unsplash.com/photo-1575032617751-6ddec2089882?auto=format&fit=crop&w=800&q=80',
+          alt: 'Pratinjau tas kulit rona Olive Forest',
+          caption: 'Koleksi Rona \u2022 Olive Forest Leather'
+        },
+        obsidian: {
+          name: 'Obsidian Black',
+          desc: 'Hitam karbon pekat yang menegaskan garis batas geometris tas dan memberikan kesan kokoh elegan dengan pantulan satin lembut.',
+          image: 'https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=800&q=80',
+          alt: 'Pratinjau tas kulit arsitektural rona Obsidian Black',
+          caption: 'Koleksi Rona \u2022 Obsidian Leather'
+        },
+        alabaster: {
+          name: 'Alabaster Oat',
+          desc: 'Warna krem gading lembut yang mempertahankan kemurnian pori kulit nabati, memberikan tampilan bersih dan terang dalam pencahayaan alami.',
+          image: 'https://images.unsplash.com/photo-1598532163257-ae3c6b2524b6?auto=format&fit=crop&w=800&q=80',
+          alt: 'Pratinjau tas kulit rona Alabaster Oat',
+          caption: 'Koleksi Rona \u2022 Alabaster Leather'
+        }
+      };
+
+      var studioSection = document.getElementById('rona-kulit');
+      var cardName = document.getElementById('shade-card-name');
+      var cardDesc = document.getElementById('shade-card-desc');
+      var visualImg = document.getElementById('shade-visual-img');
+      var visualCaption = document.getElementById('shade-visual-caption');
+      var shadeButtons = document.querySelectorAll('.shade-btn');
+
+      shadeButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+          var targetShade = this.getAttribute('data-shade');
+          if (!targetShade || !shadeData[targetShade]) return;
+
+          // Perbarui status aria-pressed
+          shadeButtons.forEach(function(btn) {
+            btn.setAttribute('aria-pressed', 'false');
+          });
+          this.setAttribute('aria-pressed', 'true');
+
+          // Ubah atribut background section
+          studioSection.setAttribute('data-active-shade', targetShade);
+
+          // Update teks keterangan warna
+          cardName.textContent = shadeData[targetShade].name;
+          cardDesc.textContent = shadeData[targetShade].desc;
+
+          // Update foto pratinjau warna secara dinamis
+          if (visualImg) {
+            visualImg.style.opacity = '0.3';
+            setTimeout(function() {
+              visualImg.src = shadeData[targetShade].image;
+              visualImg.alt = shadeData[targetShade].alt;
+              if (visualCaption) {
+                visualCaption.textContent = shadeData[targetShade].caption;
+              }
+              visualImg.style.opacity = '1';
+            }, 180);
+          }
+        });
+      });
+
+      // Pastikan aksesibilitas keyboard tetap nyaman pada accordion
+      var detailsElements = document.querySelectorAll('details.model-item');
+      detailsElements.forEach(function(item) {
+        var summary = item.querySelector('summary');
+        if (summary) {
+          summary.setAttribute('tabindex', '0');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
